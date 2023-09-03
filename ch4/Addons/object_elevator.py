@@ -41,6 +41,8 @@ def get_constraint(ob, constr_type, reuse=True):
 
 class OBJECT_OT_elevator(bpy.types.Operator):
     """Move Objects up to a certain height"""
+    """• bl_label: The display name of the panel
+        • bl_idname: The unique name of the panel for internal usage"""
     bl_idname = "object.pckt_floor_transform"
     bl_label = "Elevate Objects"
     bl_options = {'REGISTER', 'UNDO'}
@@ -96,6 +98,7 @@ def draw_elevator_item(self, context):
 
 def register():
     bpy.utils.register_class(OBJECT_OT_elevator)
+    # 插件被启用或者禁用的时候会用到这俩函数，所以这里作用对象时 draw_elevator_item
     bpy.types.VIEW3D_MT_object_context_menu.append(draw_elevator_item)
 
 
