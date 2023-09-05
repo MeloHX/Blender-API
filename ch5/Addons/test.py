@@ -79,10 +79,10 @@ class OBJECT_PT_very_simple(bpy.types.Panel):
     """Creates a Panel in the object context of the properties editor"""
     bl_label = "A Very Simple Panel"
     bl_idname = "VERYSIMPLE_PT_layout"
-    #bl_space_type = 'PROPERTIES'
-    bl_space_typr = 'VIEW_3D'
-    #bl_region_type = 'WINDOW'
-    bl_region_type = 'UI'
+    bl_space_type = 'PROPERTIES'
+    #bl_space_type = 'VIEW_3D'
+    bl_region_type = 'WINDOW'
+    #bl_region_type = 'UI'
     bl_category = "Our Panel"
     bl_context = 'object'
 
